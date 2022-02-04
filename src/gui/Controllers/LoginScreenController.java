@@ -17,7 +17,7 @@ import javafx.scene.layout.BorderPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class LoginScreenController implements Initializable {
 
     @FXML
     private BorderPane parentBorderPane;
