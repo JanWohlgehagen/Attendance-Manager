@@ -7,8 +7,9 @@
     -fx-border-radius: 5;
     -fx-border-width: 2;
     -fx-border-color: black;
-    -fx-background-color: rgba(0, 0, 0, 0.5);
     -fx-background-radius: 5;
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,1), 10, 0, 0, 0);
 }
 
 .button{
@@ -27,5 +28,3 @@
 .button:focused {
     -fx-border-color: white;
 }
-
-
