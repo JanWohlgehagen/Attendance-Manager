@@ -1,0 +1,12 @@
+Button{
+    -fx-background-color: red;
+}
+
+.buttonAttend{
+    -fx-background-color: green;
+}
+
+.ImageView{
+    -fx-background-image: url("../util/images/loginBackGround.png");
+    -fx-background-size: 100% 100%;
+}

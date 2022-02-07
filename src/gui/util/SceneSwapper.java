@@ -25,7 +25,7 @@ public class SceneSwapper {
             Scene ViewScene = new Scene(Scene);
             stage.setTitle("Attendance Manager");
             stage.setScene(ViewScene);
-            stage.show();
+            stage.showAndWait();
         } catch (IOException IOex) {
             IOex.printStackTrace();
         }
