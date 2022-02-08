@@ -7,6 +7,7 @@ Button{
 }
 
 .ImageView{
-    -fx-background-image: url("../util/images/loginBackGround.png");
+    -fx-background-image: url("../util/images/user.jpg");
+    -fx-background-repeat: no-repeat;
     -fx-background-size: 100% 100%;
 }
