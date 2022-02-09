@@ -8,13 +8,15 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" stylesheets="@../css/StudentMenu.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" stylesheets="@../css/StudentMenu.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controllers.StudentMenuController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" percentWidth="60.0" prefWidth="300.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" percentWidth="40.0" prefWidth="300.0" />
@@ -33,13 +35,20 @@
       </Label>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
-            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="ImageView" />
-            <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="150.0" styleClass="buttonAttend" text="Meld Ankomst" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
+            <ImageView fx:id="imvStudentFoto" fitHeight="112.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" styleClass="ImageView">
+               <image>
+                  <Image url="@../util/images/loginBackGround.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#handelMeldAnkomst" prefHeight="90.0" prefWidth="150.0" styleClass="buttonAttend" text="Meld Ankomst" textAlignment="CENTER" VBox.vgrow="SOMETIMES">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="150.0" text="Anmod rettelse" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#handelAnmodRettelse" prefHeight="90.0" prefWidth="150.0" text="Anmod rettelse" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -59,11 +68,11 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <TableView fx:id="tvFraværsDage" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
               <columns>
-                <TableColumn prefWidth="75.0" text="Fag" />
-                <TableColumn prefWidth="75.0" text="Dag" />
-                  <TableColumn prefWidth="75.0" text="Verserende" />
+                <TableColumn fx:id="tcFag" prefWidth="75.0" text="Fag" />
+                <TableColumn fx:id="tcDag" prefWidth="75.0" text="Dag" />
+                  <TableColumn fx:id="tcVerserende" prefWidth="75.0" text="Verserende" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -89,7 +98,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <AreaChart>
+            <AreaChart fx:id="acFravær">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>

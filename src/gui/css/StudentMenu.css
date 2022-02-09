@@ -1,9 +1,14 @@
+
+GridPane{
+    -fx-background-color: rgba(21, 20, 20, 0.43);
+}
+
 Button{
-    -fx-background-color: red;
+    -fx-background-color: #b9aeae;
 }
 
 .buttonAttend{
-    -fx-background-color: green;
+    -fx-background-color: #1c881c;
 }
 
 .ImageView{
