@@ -12,6 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.util.PrimitiveIterator;
 import java.util.ResourceBundle;
 
 public class LoginScreenController implements Initializable {
@@ -37,6 +38,7 @@ public class LoginScreenController implements Initializable {
     public void handleCancel(ActionEvent actionEvent) {
         txtUserID.clear();
         txtUserPassword.clear();
+        closeWindow();
     }
 
     public void handleSignIn(ActionEvent actionEvent) {
@@ -45,5 +47,11 @@ public class LoginScreenController implements Initializable {
         } else {
             sceneSwapper.sceneSwitch(new Stage(), "TeacherMenuView.fxml");
         }
+        closeWindow();
+    }
+
+    private void closeWindow(){
+        Stage stage = (Stage) stackPaneParent.getScene().getWindow();
+        stage.close();
     }
 }
