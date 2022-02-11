@@ -1,0 +1,201 @@
+.root{
+    -bg-gradient: linear-gradient(from 25px 25px to 500px 300px, rgba(151, 232, 232, 0.65), rgba(192, 232, 151, 0.65));
+    -hlight-gradient: linear-gradient(to bottom, #c0e897, #97e8e8);
+
+    -primary: #81c48355;
+    -tertiary: #00fc9b;
+    -tertiary-armed: #8cecc4;
+}
+
+.ImageView{
+    -fx-background-image: url("../util/images/user.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+
+.transparent{
+    -fx-background-color: transparent;
+}
+
+.label{
+    -fx-text-fill: black;
+}
+
+.drag-allowed{
+    -fx-background-color: linear-gradient(from 25px 25px to 500px 300px, #0052D4, #4364F7);
+    -fx-background-radius: 10px;
+}
+
+.background-pane{
+    -fx-background-color: -bg-gradient;
+}
+
+.shadow-pane{
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+.transparent-background{
+    -fx-background-color: transparent;
+}
+
+.transparent-background > .viewport{
+    -fx-background-color: transparent;
+}
+
+.drag-allowed{
+    -fx-background-color: linear-gradient(from 25px 25px to 500px 300px, #0052D4, #4364F7);
+    -fx-background-radius: 10px;
+}
+
+.button{
+    -fill: #97e8e8;
+
+    -fx-border-color: #2e6da4;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: -fill;
+    -fx-min-height: -height;
+    -fx-min-width: -width;
+    -fx-max-height: -height;
+    -fx-max-width: -width;
+}
+
+.button:hover {
+    -fill: -tertiary;
+}
+
+.button:armed {
+    -fill: -tertiary-armed;
+}
+
+.logOutButton:hover{
+    -fill: #e89797;
+}
+
+/* TABLES */
+.table-view,
+.table-view .column-header,
+.table-view .column-header-background .filler,
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: -hlight-gradient;
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-padding: 0 0 5px 0;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #93f9b911;
+    -fx-text-background-color: -tertiary;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:even{
+    -fx-background-color: #1dbbdd11;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:focused {
+    -fx-background-color: -primary;
+    -fx-background-radius: 5px;
+    -fx-background-insets: 2px;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -tertiary;
+    -fx-text-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-background-insets: 2px;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  -hlight-gradient;
+}
+
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #1dbbdd44, #93f9b944);
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+
+/*
+Combobox styling
+ */
+
+.combo-box:focused {
+    -fx-effect: dropshadow(gaussian, #b4d1f3, 3, 3, 0, 0);
+}
+.combo-box:focused * {
+    -fx-effect: none;
+}
+
+.combo-box > .arrow-button, .choice-box > .arrow-button {
+    -fx-border-width: 0;
+}
+
+.combo-box {
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-pref-height: 30;
+    -fx-background-insets: 0;
+    -fx-border-color: #cecece;
+    -fx-padding: -1;
+    -fx-border-width: 1;
+    -fx-border-color: #2e6da4;
+    -fx-background-color: #97e8e8;
+}
+
+.combo-box:editable > .arrow-button {
+    -fx-background-color: white;
+}
+
+.combo-box:editable > .arrow-button:hover {
+    -fx-background-color: #e6e6e6;
+}
+
+.combo-box:editable > .arrow-button:pressed {
+    -fx-effect: innershadow(gaussian, #adadad, 10, 0, 0, 3);
+}
+
+.combo-box > .text-input  {
+    -fx-background-radius: 4 0 0 4;
+    -fx-border-width: 0;
+}
+
+/*hover state*/
+.combo-box:hover {
+    -fx-background-color: -tertiary;
+}
+/*pressed selected*/
+.combo-box:pressed, .combo-box:selected{
+    -fx-background-color: #286090;
+    -fx-border-color: #204d74;
+    -fx-effect: innershadow(gaussian, #204d74, 10, 0, 0, 3);
+}
