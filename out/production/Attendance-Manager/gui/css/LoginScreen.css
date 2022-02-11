@@ -1,6 +1,28 @@
 .root{
-    -fx-background-image: url("../util/images/loginBackGround.png");
-    -fx-background-size: 100% 100%;
+    -bg-gradient: linear-gradient(from 25px 25px to 500px 300px, #97e8e8, #c0e897);
+
+    -primary: #81c48355;
+    -secondary: #375FCB;
+    -tertiary: #00fc9b;
+    -tertiary-armed: #8cecc4;
+}
+
+.background-pane{
+    -fx-background-color: -bg-gradient;
+}
+
+.button{
+    -fill: #97e8e8;
+
+    -fx-background-color: -fill;
+}
+
+.button:hover {
+    -fill: -tertiary;
+}
+
+.button:armed {
+    -fill: -tertiary-armed;
 }
 
 .vBox{
@@ -10,21 +32,4 @@
     -fx-background-radius: 5;
     -fx-background-color: rgba(0, 0, 0, 0.4);
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,1), 10, 0, 0, 0);
-}
-
-.button{
-    -fx-background-color: black;
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-    -fx-border-radius: 5;
-    -fx-border-color: black;
-    -fx-background-radius: 5;
-}
-
-.button:hover {
-    -fx-border-color: white;
-}
-
-.button:focused {
-    -fx-border-color: white;
 }

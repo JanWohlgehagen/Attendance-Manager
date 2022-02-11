@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<StackPane fx:id="stackPaneParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="625.0" stylesheets="@../css/LoginScreen.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controllers.LoginScreenController">
+<StackPane fx:id="stackPaneParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="625.0" styleClass="background-pane" stylesheets="@../css/LoginScreen.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controllers.LoginScreenController">
    <children>
       <VBox fx:id="vBoxLoginBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" spacing="15.0" styleClass="vBox" StackPane.alignment="CENTER">
          <children>
