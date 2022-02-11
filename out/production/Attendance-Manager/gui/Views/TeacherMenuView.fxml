@@ -9,7 +9,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -19,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controllers.TeacherMenuController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -47,16 +46,16 @@
             <Insets />
          </GridPane.margin>
          <children>
-            <ComboBox prefHeight="24.0" prefWidth="129.0" promptText="Fag">
+            <ComboBox fx:id="cbClass" onAction="#handleViewStudent" prefHeight="24.0" prefWidth="129.0" promptText="Fag">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </ComboBox>
-            <TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <TableView fx:id="tvStudent" onMouseClicked="#handleClick" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
               <columns>
-                  <TableColumn prefWidth="75.0" text="Student ID" />
-                <TableColumn prefWidth="75.0" text="Navn" />
-                <TableColumn prefWidth="75.0" text="Fravær" />
+                  <TableColumn fx:id="tcStudentID" prefWidth="75.0" text="Student ID" />
+                <TableColumn fx:id="tcName" prefWidth="75.0" text="Navn" />
+                <TableColumn fx:id="tcAbsence" prefWidth="75.0" text="Fravær" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -69,8 +68,8 @@
       </VBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" text="Fraværds rettelser" textAlignment="CENTER" />
-            <Label text="nr. 3">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleAbsences" text="Fraværds rettelser" textAlignment="CENTER" />
+            <Label fx:id="lalCountCorrections" text="nr. 3">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>
@@ -119,17 +118,20 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ImageView fitHeight="149.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+            <ImageView fx:id="imageStudent" fitHeight="149.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
                <image>
                   <Image url="@../util/images/user.jpg" />
                </image>
+               <GridPane.margin>
+                  <Insets top="15.0" />
+               </GridPane.margin>
             </ImageView>
+            <Label fx:id="lalGPName" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="lalGPStudentID" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="lalGPAbsence" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
          </children>
       </GridPane>
-      <BarChart title="Fravær" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+      <BarChart fx:id="barChart" title="Fravær" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>

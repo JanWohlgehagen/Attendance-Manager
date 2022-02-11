@@ -5,16 +5,19 @@ import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.awt.*;
 import java.util.Date;
 
 public class Student {
     private StringProperty firstName = new SimpleStringProperty();
     private StringProperty lastName = new SimpleStringProperty();
+    private StringProperty studentID = new SimpleStringProperty();
     private ObservableList<AbsentDay> absentDays = FXCollections.observableArrayList();
 
-    public Student(){
-        firstName.set("Mark");
-        lastName.set("Davis");
+    public Student(String studentID, String firstName, String lastName){
+        this.studentID.set(studentID);
+        this.firstName.set(firstName);
+        this.lastName.set(lastName);
 
         absentDays.add(new AbsentDay(new Date(2022, 1, 21)));
         absentDays.add(new AbsentDay(new Date(2022, 1, 23)));
@@ -28,6 +31,22 @@ public class Student {
 
     public void setFirstName(String firstName) {
         this.firstName.set(firstName);
+    }
+
+    public StringProperty getfullName(){
+        StringProperty fullName = new SimpleStringProperty();
+        fullName.set(firstName.getValue() + " " + lastName.getValue());
+        return fullName;
+    }
+
+    public StringProperty getStudentID(){
+        return studentID;
+    }
+
+    public StringProperty getAbsentInPercent(){
+        StringProperty absentInPercent = new SimpleStringProperty();
+        absentInPercent.set("5 %");
+        return absentInPercent;
     }
 
     public StringProperty getLastName() {
