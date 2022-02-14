@@ -21,11 +21,11 @@ public class SceneSwapper {
     public void sceneSwitch(Stage stage, String fxmlClassName) {
         try {
             URL url = new File("src/gui/Views/" + fxmlClassName).toURI().toURL();
-            Parent Scene = FXMLLoader.load(url);
-            Scene ViewScene = new Scene(Scene);
+            Parent scene = FXMLLoader.load(url);
+            Scene viewScene = new Scene(scene);
             stage.setTitle("Attendance Manager");
-            stage.setScene(ViewScene);
-            stage.showAndWait();
+            stage.setScene(viewScene);
+            stage.show();           // har lige lavet lidt rettelser, det var showAndWait(); før og det knækker lidt koden for at skifte vindue og få den til at lukke tidl.
         } catch (IOException IOex) {
             IOex.printStackTrace();
         }
