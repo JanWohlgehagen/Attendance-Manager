@@ -3,10 +3,6 @@ package gui.Models;
 import be.Student;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class StudentListModel {
 
     private ObservableList<Student> students = FXCollections.observableArrayList();
