@@ -97,6 +97,7 @@ public class TeacherMenuController implements Initializable {
 
     public void handleLogOut(ActionEvent actionEvent) {
         Stage stage = (Stage) GridPaneParent.getScene().getWindow();
+        sceneSwapper.sceneSwitch(new Stage(),"LoginScreenView.fxml");
         stage.close();
 
     }
