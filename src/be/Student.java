@@ -19,10 +19,10 @@ public class Student {
         this.firstName.set(firstName);
         this.lastName.set(lastName);
 
-        absentDays.add(new AbsentDay(new Date(2022, 1, 21)));
-        absentDays.add(new AbsentDay(new Date(2022, 1, 23)));
-        absentDays.add(new AbsentDay(new Date(2022, 1, 24)));
-        absentDays.add(new AbsentDay(new Date(2022, 1, 25)));
+        absentDays.add(new AbsentDay(new Date(2022, 1, 21),"ITO"));
+        absentDays.add(new AbsentDay(new Date(2022, 1, 23),"ITO"));
+        absentDays.add(new AbsentDay(new Date(2022, 1, 24),"SCO"));
+        absentDays.add(new AbsentDay(new Date(2022, 1, 24),"SDE"));
     }
 
     public StringProperty getFirstName() {

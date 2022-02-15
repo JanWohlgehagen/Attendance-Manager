@@ -1,19 +1,18 @@
 package be;
 
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.*;
 
 import java.util.Date;
 
 public class AbsentDay {
     private BooleanProperty correctionPending = new SimpleBooleanProperty();
     private ObjectProperty<Date> date = new SimpleObjectProperty<>();
+    private StringProperty subject = new SimpleStringProperty();
 
-    public AbsentDay(Date date){
+    public AbsentDay(Date date, String subject){
         this.date.set(date);
         this.correctionPending.set(false);
+        this.subject.set(subject);
     }
 
     public BooleanProperty getCorrectionPending() {
@@ -30,5 +29,9 @@ public class AbsentDay {
 
     public void setDate(ObjectProperty<Date> date) {
         this.date = date;
+    }
+
+    public StringProperty getSubject() {
+        return subject;
     }
 }

@@ -79,11 +79,11 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <TableView fx:id="tvSickDays" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
               <columns>
-                <TableColumn prefWidth="75.0" text="Fag" />
-                <TableColumn prefWidth="75.0" text="Dag" />
-                  <TableColumn prefWidth="75.0" text="Verserende" />
+                <TableColumn fx:id="tcFag" prefWidth="75.0" text="Fag" />
+                <TableColumn fx:id="tcDag" prefWidth="75.0" text="Dag" />
+                  <TableColumn fx:id="tcVerserende" prefWidth="75.0" text="Verserende" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -97,7 +97,7 @@
             <Insets top="15.0" />
          </padding>
       </VBox>
-      <Label alignment="CENTER" layoutX="175.0" layoutY="17.0" prefHeight="73.0" prefWidth="270.0" styleClass="title-text" text="Student" textAlignment="CENTER" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+      <Label fx:id="lblStudentName" alignment="CENTER" layoutX="175.0" layoutY="17.0" prefHeight="73.0" prefWidth="270.0" styleClass="title-text" text="Student" textAlignment="CENTER" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="1">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
@@ -109,7 +109,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <AreaChart>
+            <AreaChart fx:id="areaChart">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
