@@ -51,7 +51,12 @@ public class StudentMenuController implements Initializable {
     }
 
     public void anmodRettelse(ActionEvent actionEvent) {
-        if(tvSickDays.getSelectionModel().getSelectedItem().getCorrectionPending().getValue() == false)
+        if (tvSickDays.getSelectionModel().getSelectedItem() == null)
+        {
+            Alert alertCheck = new Alert(Alert.AlertType.CONFIRMATION, "Vælg en dag.", ButtonType.OK);
+            alertCheck.showAndWait();
+        }
+        else if(tvSickDays.getSelectionModel().getSelectedItem().getCorrectionPending().getValue() == false)
         {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Er du sikker på, at du vil sende rettelsen til godkendelse?", ButtonType.YES, ButtonType.NO);
             Optional<ButtonType> result = alert.showAndWait();
@@ -60,10 +65,10 @@ public class StudentMenuController implements Initializable {
                 tvSickDays.getSelectionModel().getSelectedItem().setCorrectionPending();
             }
         }
-        else if (tvSickDays.getSelectionModel().getSelectedItem() != null)
+        else
         {
-            Alert alertCheck = new Alert(Alert.AlertType.CONFIRMATION, "Tjek at du har valgt en dag der ikke er anmodet om.", ButtonType.OK);
-            Optional<ButtonType> result = alertCheck.showAndWait();
+            Alert alertCheck = new Alert(Alert.AlertType.CONFIRMATION, "Denne dag er anmodet", ButtonType.OK);
+            alertCheck.showAndWait();
         }
 
 

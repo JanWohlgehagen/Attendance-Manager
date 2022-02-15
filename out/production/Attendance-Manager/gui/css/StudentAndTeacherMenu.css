@@ -90,7 +90,7 @@
 
 .table-row-cell:hover {
     -fx-background-color: #93f9b911;
-    -fx-text-background-color: -tertiary;
+    -fx-text-background-color: #0daf7b;
 }
 
 .table-row-cell:odd{
