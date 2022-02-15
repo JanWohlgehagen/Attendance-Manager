@@ -43,18 +43,11 @@ public class LoginScreenController implements Initializable {
     public void handleCancel(ActionEvent actionEvent) {
         txtUserID.clear();
         txtUserPassword.clear();
-        closeWindow();
     }
 
     public void handleSignIn(ActionEvent actionEvent) throws IOException {
         if (txtUserID.getText().contains("student")){
-            //sceneSwapper.sceneSwitch(new Stage(), "StudentMenuView.fxml");        -- ERHHH vi bruger ikke din sceneSwapper her, men det virker som det skal nu - ideas?
-            URL url = new File("src/gui/Views/StudentMenuView.fxml").toURI().toURL();
-            Parent scene = FXMLLoader.load(url);
-            Scene viewScene = new Scene(scene);
-            Stage stage = new Stage();
-            stage.setScene(viewScene);
-            stage.show();
+            sceneSwapper.sceneSwitch(new Stage(), "StudentMenuView.fxml");
         } else {
             sceneSwapper.sceneSwitch(new Stage(), "TeacherMenuView.fxml");
         }
