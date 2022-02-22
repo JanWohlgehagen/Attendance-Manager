@@ -34,6 +34,11 @@
       <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleLogOut" styleClass="logOutButton" text="Log ud" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
       <Label alignment="CENTER" text="Velkommen" textAlignment="CENTER" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES">
          <font>
             <Font name="System Bold" size="36.0" />
@@ -53,9 +58,6 @@
                <VBox.margin>
                   <Insets bottom="5.0" left="2.0" />
                </VBox.margin>
-               <padding>
-                  <Insets left="9.0" />
-               </padding>
             </ComboBox>
             <TableView fx:id="tvStudent" onMouseClicked="#handleClick" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
               <columns>
@@ -135,11 +137,6 @@
       <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
       <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="6" />
       <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleAbsences" text="Fraværds rettelser" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="7">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleLogOut" styleClass="logOutButton" text="Log ud" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
          <font>
             <Font size="18.0" />
          </font>

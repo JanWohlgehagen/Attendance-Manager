@@ -158,8 +158,8 @@ Combobox styling
 
 .combo-box {
     -fx-font-weight: bold;
-    -fx-border-radius: 4;
-    -fx-background-radius: 4;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
     -fx-pref-height: 30;
     -fx-background-insets: 0;
     -fx-border-color: #79e4ff;
@@ -181,7 +181,7 @@ Combobox styling
 }
 
 .combo-box > .text-input  {
-    -fx-background-radius: 4 0 0 4;
+    -fx-background-radius: 5 0 0 5;
     -fx-border-width: 0;
 }
 
