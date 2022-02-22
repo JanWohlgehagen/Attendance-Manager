@@ -162,10 +162,10 @@ Combobox styling
     -fx-background-radius: 4;
     -fx-pref-height: 30;
     -fx-background-insets: 0;
-    -fx-border-color: transparent;
+    -fx-border-color: #79e4ff;
     -fx-padding: -1;
-    -fx-border-width: 1;
-    -fx-background-color: linear-gradient(to bottom, darkorange, orange);
+    -fx-border-width: 0;
+    -fx-background-color: #79e4ff;
 }
 
 .combo-box:editable > .arrow-button {
@@ -193,5 +193,6 @@ Combobox styling
 .combo-box:pressed, .combo-box:selected{
     -fx-background-color: #286090;
     -fx-border-color: #204d74;
-    -fx-effect: innershadow(gaussian, #204d74, 10, 0, 0, 3);
+    -fx-border-width: 1;
+    -fx-effect: innershadow(gaussian, #204d74, 10, 0, 0, 1);
 }
