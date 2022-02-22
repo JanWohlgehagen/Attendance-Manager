@@ -49,10 +49,13 @@
             <Insets />
          </GridPane.margin>
          <children>
-            <ComboBox fx:id="cbClass" onAction="#handleViewStudent" prefHeight="24.0" prefWidth="129.0" promptText="Fag" styleClass="primary">
+            <ComboBox fx:id="cbClass" onAction="#handleViewStudent" prefHeight="24.0" prefWidth="129.0" promptText="Vælg Fag" styleClass="primary">
                <VBox.margin>
-                  <Insets bottom="5.0" />
+                  <Insets bottom="5.0" left="2.0" />
                </VBox.margin>
+               <padding>
+                  <Insets left="9.0" />
+               </padding>
             </ComboBox>
             <TableView fx:id="tvStudent" onMouseClicked="#handleClick" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
               <columns>

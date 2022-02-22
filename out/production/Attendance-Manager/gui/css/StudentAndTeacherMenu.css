@@ -1,10 +1,10 @@
 .root{
-    -bg-gradient: linear-gradient(from 25px 25px to 500px 300px, rgba(151, 232, 232, 0.65), rgba(192, 232, 151, 0.65));
-    -hlight-gradient: linear-gradient(to bottom, #c0e897, #97e8e8);
+    -bg-gradient: linear-gradient(from 25px 25px to 500px 300px, rgba(201, 121, 255, 0.65), rgba(134, 121, 255, 0.65));
+    -hlight-gradient: linear-gradient(to bottom, #8679ff, #c979ff);
 
     -primary: #81c48355;
-    -tertiary: #00fc9b;
-    -tertiary-armed: #8cecc4;
+    -tertiary: #8679ff;
+    -tertiary-armed: #c979ff;
 }
 
 .ImageView{
@@ -49,7 +49,7 @@
 }
 
 .button{
-    -fill: #97e8e8;
+    -fill: #79e4ff;
 
     -fx-border-color: #2e6da4;
     -fx-border-radius: 5;
@@ -90,7 +90,7 @@
 
 .table-row-cell:hover {
     -fx-background-color: #93f9b911;
-    -fx-text-background-color: #0daf7b;
+    -fx-text-background-color: #8679ff;
 }
 
 .table-row-cell:odd{
@@ -146,7 +146,7 @@ Combobox styling
  */
 
 .combo-box:focused {
-    -fx-effect: dropshadow(gaussian, #b4d1f3, 3, 3, 0, 0);
+    -fx-effect: dropshadow(gaussian, #8679ff, 3, 3, 0, 0);
 }
 .combo-box:focused * {
     -fx-effect: none;
@@ -157,15 +157,15 @@ Combobox styling
 }
 
 .combo-box {
+    -fx-font-weight: bold;
     -fx-border-radius: 4;
     -fx-background-radius: 4;
     -fx-pref-height: 30;
     -fx-background-insets: 0;
-    -fx-border-color: #cecece;
+    -fx-border-color: transparent;
     -fx-padding: -1;
     -fx-border-width: 1;
-    -fx-border-color: #2e6da4;
-    -fx-background-color: #97e8e8;
+    -fx-background-color: linear-gradient(to bottom, darkorange, orange);
 }
 
 .combo-box:editable > .arrow-button {
