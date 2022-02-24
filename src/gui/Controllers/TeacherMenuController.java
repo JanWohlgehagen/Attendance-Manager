@@ -113,11 +113,11 @@ public class TeacherMenuController implements Initializable {
 
         XYChart.Series<String, Double> dataSeries1 = new XYChart.Series<>();
         dataSeries1.setName("Fravær");
-        dataSeries1.getData().add(new XYChart.Data("Mandag", randomDouble()));
-        dataSeries1.getData().add(new XYChart.Data("Tirsdag", randomDouble()));
-        dataSeries1.getData().add(new XYChart.Data("Onsdag", randomDouble()));
-        dataSeries1.getData().add(new XYChart.Data("Torsdag", randomDouble()));
-        dataSeries1.getData().add(new XYChart.Data("Fredag", randomDouble()));
+        dataSeries1.getData().add(new XYChart.Data("Mandag", 10.0));
+        dataSeries1.getData().add(new XYChart.Data("Tirsdag", 35.0));
+        dataSeries1.getData().add(new XYChart.Data("Onsdag", 5.0));
+        dataSeries1.getData().add(new XYChart.Data("Torsdag", 20.0));
+        dataSeries1.getData().add(new XYChart.Data("Fredag", 30.0));
         barChart.getData().add(dataSeries1);
     }
 
