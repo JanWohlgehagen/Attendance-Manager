@@ -48,17 +48,20 @@ public class LoginScreenController implements Initializable {
     }
 
     public void handleSignIn(ActionEvent actionEvent) {
-        if (txtUserID.getText().contains("student") && txtUserPassword.getText().contains("123")){
+        if (txtUserID.getText().contains("student") && txtUserPassword.getText().contains("123")) {
             sceneSwapper.sceneSwitch(new Stage(), "StudentMenuView.fxml");
             closeWindow();
             txtUserID.clear();
             txtUserPassword.clear();
-        }
-        else if (txtUserID.getText().contains("teacher") && txtUserPassword.getText().contains("123")){
+        }else if (txtUserID.getText().contains("teacher") && txtUserPassword.getText().contains("123")){
             sceneSwapper.sceneSwitch(new Stage(), "TeacherMenuView.fxml");
             closeWindow();
             txtUserID.clear();
             txtUserPassword.clear();
+        }else{
+            Alert alertCheck = new Alert(Alert.AlertType.ERROR, "Login error\n" +
+                    "Username or Password incorrect", ButtonType.OK);
+            alertCheck.showAndWait();
         }
 
     }
