@@ -8,6 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -45,13 +47,24 @@ public class LoginScreenController implements Initializable {
         txtUserPassword.clear();
     }
 
-    public void handleSignIn(ActionEvent actionEvent) throws IOException {
-        if (txtUserID.getText().contains("student")){
+    public void handleSignIn(ActionEvent actionEvent) {
+        if (txtUserID.getText().contains("student") || txtUserPassword.getText().contains("123")){
             sceneSwapper.sceneSwitch(new Stage(), "StudentMenuView.fxml");
-        } else {
-            sceneSwapper.sceneSwitch(new Stage(), "TeacherMenuView.fxml");
+            closeWindow();
+            txtUserID.clear();
+            txtUserPassword.clear();
         }
-        closeWindow();
+        else if (txtUserID.getText().contains("teacher") || txtUserPassword.getText().contains("123")){
+            sceneSwapper.sceneSwitch(new Stage(), "TeacherMenuView.fxml");
+            closeWindow();
+            txtUserID.clear();
+            txtUserPassword.clear();
+        }else{
+            Alert alertCheck = new Alert(Alert.AlertType.ERROR, "Login error\n" +
+                    "Username or Password incorrect", ButtonType.OK);
+            alertCheck.showAndWait();
+        }
+
     }
 
     private void closeWindow(){
