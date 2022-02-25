@@ -54,15 +54,11 @@ public class LoginScreenController implements Initializable {
             txtUserID.clear();
             txtUserPassword.clear();
         }
-        else if (txtUserID.getText().contains("teacher") || txtUserPassword.getText().contains("123")){
+        else{
             sceneSwapper.sceneSwitch(new Stage(), "TeacherMenuView.fxml");
             closeWindow();
             txtUserID.clear();
             txtUserPassword.clear();
-        }else{
-            Alert alertCheck = new Alert(Alert.AlertType.ERROR, "Login error\n" +
-                    "Username or Password incorrect", ButtonType.OK);
-            alertCheck.showAndWait();
         }
 
     }
